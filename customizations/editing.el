@@ -71,3 +71,9 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+;; Turn on auto-completion with Company-Mode
+(global-company-mode)
+(add-hook 'cider-repl-mode-hook #'company-mode)
+(add-hook 'cider-mode-hook #'company-mode)
+
