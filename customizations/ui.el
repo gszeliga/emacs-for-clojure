@@ -31,6 +31,9 @@
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
 
+;; Use the Input font size 12
+(set-default-font "Input-12")
+
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
 ;; (in lines high) Emacs will have whenever you start it
