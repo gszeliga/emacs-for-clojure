@@ -37,7 +37,7 @@
 (defvar inherit-input-method nil)
 
 ;; The packages you want installed. You can also install these
-;; manually with M-x package-install
+; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
   '(;; makes handling lisp expressions much, much easier
@@ -81,6 +81,9 @@
     ;; http://company-mode.github.io/
     company
     
+    ;; https://github.com/clojure-emacs/clj-refactor.el/wiki#customization
+    clj-refactor
+
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -153,7 +156,7 @@
  '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (company tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider))))
+    (helm company tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
