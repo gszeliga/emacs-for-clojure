@@ -84,6 +84,9 @@
     ;; https://github.com/clojure-emacs/clj-refactor.el/wiki#customization
     clj-refactor
 
+    ;; required by some themes
+    autothemer
+
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -151,6 +154,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
+ '(custom-safe-themes
+   (quote
+    ("43b0db785fc313b52a42f8e5e88d12e6bd6ff9cee5ffb3591acf51bbd465b3f4" default)))
  '(package-selected-packages
    (quote
     (helm company tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
@@ -166,4 +172,5 @@
 ;; These customizations change the way emacs looks and disable/enable
 ;; some user interface elements
 (load "ui.el")
+
 
