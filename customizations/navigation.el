@@ -59,3 +59,13 @@
 
 ;; projectile everywhere!
 (projectile-global-mode)
+
+(global-set-key (kbd "C-x <C-down>") 'enlarge-window)
+(global-set-key (kbd "C-x <C-up>") 'shrink-window)
+(global-set-key (kbd "C-x <C-right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-x <C-left>") 'shrink-window-horizontally)
+
+;; enable windmove to avoid 'C-x o' all the time
+(when (fboundp 'windmove-default-keybindings)
+    (windmove-default-keybindings))
+

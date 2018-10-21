@@ -10,7 +10,9 @@
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
 	       '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
-
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/")
+	      t)
 
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -87,6 +89,9 @@
     ;; required by some themes
     autothemer
 
+    ;; racket support
+    racket-mode
+
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -117,6 +122,9 @@
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
+
+;; Scheme support
+(load-library "xscheme")
 
 
 ;;;;
@@ -159,7 +167,7 @@
     ("43b0db785fc313b52a42f8e5e88d12e6bd6ff9cee5ffb3591acf51bbd465b3f4" default)))
  '(package-selected-packages
    (quote
-    (helm company tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
+    (rust-mode toml-mode helm company tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
  '(subatomic-high-contrast t)
  '(subatomic-more-visible-comment-delimiters t))
 (custom-set-faces
