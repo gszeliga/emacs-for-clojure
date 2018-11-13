@@ -95,6 +95,28 @@
 
 (cljr-add-keybindings-with-prefix "C-c C-m")
 
+;; auto-complete ON
+(ac-config-default)
+
 ;; enable paredit 
 (add-hook 'racket-mode-hook #'enable-paredit-mode)
 
+;;YAML mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+(add-hook 'yaml-mode-hook
+	  '(lambda ()
+		(define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;; enabled gradle support
+(require 'gradle-mode)
+
+(gradle-mode 1)
+
+;; elpy for emacs
+;;(elpy-enable)
+
+;; Enable gtags
+(setq load-path (cons "/usr/local/share/gtags" load-path))
+(autoload 'gtags-mode "gtags" "" t)

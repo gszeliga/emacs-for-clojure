@@ -69,3 +69,6 @@
 (when (fboundp 'windmove-default-keybindings)
     (windmove-default-keybindings))
 
+;; enable neotree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
