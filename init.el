@@ -92,6 +92,15 @@
     ;; racket support
     racket-mode
 
+    ;; add geiser
+    geiser
+
+    auto-complete
+
+    ;; some additional development modes
+    yaml-mode
+    gradle-mode
+
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -167,7 +176,7 @@
     ("43b0db785fc313b52a42f8e5e88d12e6bd6ff9cee5ffb3591acf51bbd465b3f4" default)))
  '(package-selected-packages
    (quote
-    (dockerfile-mode thrift gtags ggtags toml-mode neotree go-mode elpy groovy-mode gradle-mode auto-complete eterm-256color multi-term rust-mode toml-mode helm company tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
+    (geiser dockerfile-mode thrift gtags ggtags toml-mode neotree go-mode elpy groovy-mode gradle-mode auto-complete eterm-256color multi-term rust-mode toml-mode helm company tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
  '(subatomic-high-contrast t)
  '(subatomic-more-visible-comment-delimiters t))
 (custom-set-faces
