@@ -101,6 +101,13 @@
     yaml-mode
     gradle-mode
 
+    ;; golang support
+    go-mode
+    go-eldoc
+
+    ;; syntax check
+    flycheck
+    
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -164,6 +171,10 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+(load "setup-go.el")
+
+;; enable flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
