@@ -120,3 +120,25 @@
 ;; Enable gtags
 (setq load-path (cons "/usr/local/share/gtags" load-path))
 (autoload 'gtags-mode "gtags" "" t)
+
+;; multiple lines editing
+(global-set-key (kbd "C-c l") 'mc/edit-lines)
+(global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c @") 'mc/mark-all-like-this)
+
+;; auto-highlight
+(global-auto-highlight-symbol-mode)
+(add-hook 'prog-mode-hook 'auto-highlight-symbol-mode)
+(define-key auto-highlight-symbol-mode-map (kbd "M-p") 'ahs-backward)
+(define-key auto-highlight-symbol-mode-map (kbd "M-n") 'ahs-forward)
+(setq ahs-idle-interval 1.0) ;; if you want instant highlighting, set it to 0, but I find it annoying
+(setq ahs-default-range 'ahs-range-whole-buffer) ;; highlight every occurence in buffer
+
+(powerline-evil-center-color-theme)
+
+(defun create-tags (dir-name)
+     "Create tags file."
+     (interactive "DDirectory: ")
+     (eshell-command 
+      (format "find %s -type f -name \"*.[ch]\" | etags -" dir-name)))

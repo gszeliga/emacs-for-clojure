@@ -108,6 +108,14 @@
     ;; syntax check
     flycheck
     
+    ;; easier way to navigate changes
+    undo-tree
+
+    ;; something handy
+    auto-highlight-symbol
+    multiple-cursors
+    powerline-evil
+
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -175,6 +183,8 @@
 
 ;; enable flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(global-undo-tree-mode)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
